@@ -175,23 +175,40 @@ export default class SkyTonight extends BaseCard {
                     moonPhase = object.phaseName;
                 }
 
+                const daysDiff = (date: Date) => {
+                    const d1 = new Date(date);
+                    const d2 = new Date();
+                    d1.setHours(0, 0, 0, 0);
+                    d2.setHours(0, 0, 0, 0);
+                    return (d1.getTime() - d2.getTime()) / (24 * 60 * 60 * 1000);
+                };
+                const formatTime = (date: Date): string => {
+                    const diff = daysDiff(date);
+                    const time = date.toISOString().substring(11, 16);
+                    switch (diff) {
+                        case 0: return time;
+                        case 1: return `Tomorrow ${time}`;
+                        case -1: return `Yesterday ${time}`;
+                        default: return this.formatDate(date);
+                    }
+                };
+
+                const observation = `${formatTime(object.rise)} to ${formatTime(object.set)}`;
+
                 return html`
                     <div class="objects-container" id="sky_tonight_${this.transformString(object.name)}">
                         <div class="image-container">
                             <img src="/local/sky-tonight-native-card/images/objects/${this.translate(objectName)}.png" alt="${this.translate(objectName)}" />
                         </div>
                         <div class="info-container">
-                            <div class="type-container">
-                                <span class="object-type ${this.transformString(objectType)}">${this.translate(objectType)}</span>
-                            </div>
                             <div class="name-container">
-                                <span class="object-name">${this.translate(objectName)}</span>
+                                <span class="object-name ${this.transformString(objectType)}">${this.translate(objectName)}</span>
                             </div>
                             <!-- <div class="position-container">
                                 <span class="object-position">${this.translate(objectPosition)}</span>
                             </div> -->
                             <div class="position-container">
-                                <span class="object-position">${this.formatDate(object.rise)} to ${this.formatDate(object.set)}</span>
+                                <span class="object-position">${observation}</span>
                             </div>
                         </div>
                         <div class="icon-container">

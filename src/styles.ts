@@ -1,6 +1,6 @@
 import { css } from 'lit';
 
-export const styles = css`   
+export const styles = css`
     .sky-tonight {
         font-size: 12px;
     }
@@ -33,21 +33,23 @@ export const styles = css`
     .objects-container .info-container .type-container .object-type {
         font-size: 16px;
     }
-    .objects-container .info-container .type-container .object-type.planet {
-        color: #f2896c;
-    }
-    .objects-container .info-container .type-container .object-type.dwarf-planet {
-        color: #f2896c;
-    }
-    .objects-container .info-container .type-container .object-type.star {
-        color: #B1B8FF;
-    }
-    .objects-container .info-container .type-container .object-type.moon {
-        color: #BCD6EF;
-    }
+
     .objects-container .info-container .name-container .object-name {
         font-size: 24px;
     }
+    .objects-container .info-container .name-container .object-name.planet {
+        color: #f2896c;
+    }
+    .objects-container .info-container .name-container .object-name.dwarf-planet {
+        color: #f2896c;
+    }
+    .objects-container .info-container .name-container .object-name.star {
+        color: #B1B8FF;
+    }
+    .objects-container .info-container .name-container .object-name.moon {
+        color: #BCD6EF;
+    }
+
     .objects-container .info-container .position-container .object-position {
         color: #b6c3d4;
         font-size: 16px;
