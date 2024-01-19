@@ -1,0 +1,40 @@
+<script src="sky-tonight-native-card.js"></script>
+
+<script type="module">
+import {html, render} from './node_modules/lit-html/lit-html.js';
+
+function onLoaded(fn) {
+  if (document.readyState == 'complete' || document.readyState == 'interactive')
+    setTimeout(fn, 1);
+  else
+    document.addEventListener('DOMContentLoaded', fn);
+}
+
+onLoaded(function () {
+	const FormulaOneCard = SUT.default;
+  console.log(new FormulaOneCard());
+	const x = new FormulaOneCard();
+	x.setConfig({
+		title: 'abc',
+		latitude: 20,
+		longitude: -50,
+		elevation: 120,
+	});
+	x.hass = {
+		locale: {
+			language: 'PL',
+			number_format: 'comma_decimal',
+			time_format: 'language'
+		},
+		states: {},
+	};
+	const html = x.render();
+	render(html, document.getElementById('container'));
+
+	const style = document.createElement('style');
+	style.innerHTML = FormulaOneCard.styles.toString();
+	document.head.appendChild(style);
+});
+</script>
+
+<div id="container"></div>

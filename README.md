@@ -58,47 +58,47 @@ The following texts can be translated or altered.
 
 | Key                         | Default value               |
 | --------------------------- | --------------------------- |
-| jan                         | Jan                         | 
-| feb                         | Feb                         | 
-| mar                         | Mar                         | 
-| apr                         | Apr                         | 
-| may                         | May                         | 
-| jun                         | Jun                         | 
-| jul                         | Jul                         | 
-| aug                         | Aug                         | 
-| sep                         | Sep                         | 
-| oct                         | Oct                         | 
-| nov                         | Nov                         | 
-| dec                         | Dec                         | 
-| above-horizon               | Above Horizon               | 
-| below-horizon               | Below Horizon               | 
-| sun                         | Sun                         | 
-| mercury                     | Mercury                     | 
-| venus                       | Venus                       | 
-| moon                        | Moon                        | 
-| mars                        | Mars                        | 
-| jupiter                     | Jupiter                     | 
-| saturn                      | Saturn                      | 
-| uranus                      | Uranus                      | 
-| neptune                     | Neptune                     | 
-| pluto                       | Pluto                       | 
-| star                        | Star                        | 
-| planet                      | Planet                      | 
-| dwarf-planet                | Dwarf Planet                | 
-| visible-to-the-naked-eye    | Visible to the naked eye    | 
-| visible-with-binoculars     | Visible with binoculars     | 
-| visible-with-telescope      | Visible with telescope      | 
-| nothing-to-see              | Nothing to see              | 
-| no-stargazing-opportunities | No stargazing opportunities | 
-| enjoy-your-stargazing       | Enjoy your stargazing       | 
-| first-quarter               | First Quarter               | 
-| full                        | Full Moon                   | 
-| last-quarter                | Last Quarter                | 
-| new                         | New Moon                    | 
-| waning-cresent              | Waning Cresent              | 
-| waning-gibbous              | Waning Gibbous              | 
-| waxing-cresent              | Waxing Cresent              | 
-| waxing-gibbous              | Waxing Gibbous              | 
+| jan                         | Jan                         |
+| feb                         | Feb                         |
+| mar                         | Mar                         |
+| apr                         | Apr                         |
+| may                         | May                         |
+| jun                         | Jun                         |
+| jul                         | Jul                         |
+| aug                         | Aug                         |
+| sep                         | Sep                         |
+| oct                         | Oct                         |
+| nov                         | Nov                         |
+| dec                         | Dec                         |
+| above-horizon               | Above Horizon               |
+| below-horizon               | Below Horizon               |
+| sun                         | Sun                         |
+| mercury                     | Mercury                     |
+| venus                       | Venus                       |
+| moon                        | Moon                        |
+| mars                        | Mars                        |
+| jupiter                     | Jupiter                     |
+| saturn                      | Saturn                      |
+| uranus                      | Uranus                      |
+| neptune                     | Neptune                     |
+| pluto                       | Pluto                       |
+| star                        | Star                        |
+| planet                      | Planet                      |
+| dwarf-planet                | Dwarf Planet                |
+| visible-to-the-naked-eye    | Visible to the naked eye    |
+| visible-with-binoculars     | Visible with binoculars     |
+| visible-with-telescope      | Visible with telescope      |
+| nothing-to-see              | Nothing to see              |
+| no-stargazing-opportunities | No stargazing opportunities |
+| enjoy-your-stargazing       | Enjoy your stargazing       |
+| first-quarter               | First Quarter               |
+| full                        | Full Moon                   |
+| last-quarter                | Last Quarter                |
+| new                         | New Moon                    |
+| waning-cresent              | Waning Cresent              |
+| waning-gibbous              | Waning Gibbous              |
+| waxing-cresent              | Waxing Cresent              |
+| waxing-gibbous              | Waxing Gibbous              |
 
 Example:
 
@@ -107,10 +107,13 @@ type: custom:sky-tonight-native-card
 latitude: 28.627222
 longitude: -80.620833
 time: 2023-07-01T00:00:00Z
-translations: 
-  'jan' : 'January' 
+translations:
+  'jan' : 'January'
 ```
 
+## Development
+
+Run `npm run dev:watch` and open `test.html` in Live Server.
 
 ## TODO
 - [ ] Add tests
